@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        div{
+            border-style: solid;
+            height:100px;
+        }
+
+        .div1{
+            background-color: red;
+            /*position: static; => standardmäßig, divs werden der Reihe nach untereinander angezeigt*/
+            /*position: relative; => damit kann man machen, dass ein div von seiner ursprünglichen Position aus verschoben wird. 
+            Dann kann es sein dass mehrere divs übereinander kommen. (sie überlappen sich)
+            top:5px;
+            left:10px;
+            */
+            /*position: absolute; => die Position bezieht sich auf den "Vatercontainer", indem sich das div befindet. Hier bsp. ist es der body. Beim absolute hat das div auch nicht mehr automatisch die ganze Breite verwendet.
+            bottom:0px;
+            */
+            /*position: fixed; => bei fixed bleibt das Elemnet auf der stelle picken, wo man es hingetan hat, wird meistens für Menüs verwendet
+            top: 0px;
+            width: 100%;
+            */
+            /*position: fixed; => bei fixed bleibt das Elemnet auf der stelle picken, wo man es hingetan hat, wird meistens für Menüs verwendet
+            top: 0px;
+            width: 100%;
+            */
+            /*position: sticky; => das Element ist ähnlich wie fixed, doch zuerst bleibt das Element fixed an der Stelle, doch dann ab einem bestimmten Punkt wandert es wieder mit
+            top: 0px;
+            width: 100%;
+            */
+            position: sticky;
+            top: 0px;
+            width: 100%;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        one
+    </div>
+    <div class="div2">
+        two
+    </div>
+    <div class="div3">
+        three
+    </div>
+    <div>
+        <ul>
+            <li>
+                ein
+            </li>
+            <li>
+                zwei
+            </li>
+            <li>
+                drei
+            </li>
+            <li>
+                ein
+            </li>
+            <li>
+                zwei
+            </li>
+            <li>
+                drei
+            </li>
+            <li>
+                ein
+            </li>
+            <li>
+                zwei
+            </li>
+            <li>
+                drei
+            </li>
+            <li>
+                ein
+            </li>
+            <li>
+                zwei
+            </li>
+            <li>
+                drei
+            </li>
+            <li>
+                ein
+            </li>
+            <li>
+                zwei
+            </li>
+            <li>
+                drei
+            </li>
+            <li>
+                ein
+            </li>
+            <li>
+                zwei
+            </li>
+            <li>
+                drei
+            </li>
+            <li>
+                ein
+            </li>
+            <li>
+                zwei
+            </li>
+            <li>
+                drei
+            </li>
+            <li>
+                ein
+            </li>
+            <li>
+                zwei
+            </li>
+            <li>
+                drei
+            </li>
+            <li>
+                ein
+            </li>
+            <li>
+                zwei
+            </li>
+            <li>
+                drei
+            </li>
+            <li>
+                ein
+            </li>
+            <li>
+                zwei
+            </li>
+            <li>
+                drei
+            </li>
+            <li>
+                ein
+            </li>
+            <li>
+                zwei
+            </li>
+            <li>
+                drei
+            </li>
+            <li>
+                ein
+            </li>
+            <li>
+                zwei
+            </li>
+            <li>
+                drei
+            </li>
+            <li>
+                ein
+            </li>
+            <li>
+                zwei
+            </li>
+            <li>
+                drei
+            </li>
+            <li>
+                ein
+            </li>
+            <li>
+                zwei
+            </li>
+            <li>
+                drei
+            </li>
+            <li>
+                ein
+            </li>
+            <li>
+                zwei
+            </li>
+            <li>
+                drei
+            </li>
+
+        </ul>
+    </div>
+</body>
+</html>

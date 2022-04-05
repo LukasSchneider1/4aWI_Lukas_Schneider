@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Unit</title>
+    <style>
+        *{
+            margin:0px;
+            font-size: 20px; /* Generelle Einstellung für die ganze Seite */
+        }
+        div{
+            height: 50px;
+            background-color:red;
+        }
+        .container1{
+            width: 50%; /* Wenn die Breite in % angegeben wird, bezieht sich das immer auf das Vaterelement, hier wär es der Main Container. So hat der Container1 eine Breite von 50% des Vaterlements, wie hier definiert. */
+            height: 50%; /* Das selbe gilt für die Höhe*/
+            font-size: 0.8rem; /* Die Schriftgröße ist nun 0.8 Mal so groß wie die Standardschriftgröße der Seite also den 20px, r => root (rem => Beziehung auf das Root Element)*/
+        }
+        .container2{
+            width: 50vw; /* Wenn die Breite in viewport width (vw) angegeben wird, bezieht sich diese Größe immer auf die Ganze Fenstergröße und von dort wird dann hier bsp. 50% als Größe genommen.*/
+            height: 50vh; /* Das selbe gilt für die Höhe */
+            font-size: 0.5em; /* Mit dem em wird die Schriftgröße vom Vatercontainer um 0.5 kleiner (em => Beziehung auf Vaterelement)*/
+        }
+        .main{
+            background-color:green;
+            height: 400px;
+            padding:10px;
+            width:200px;            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        hello
+        <div class="container1">container1</div>
+        <div class="container2">container2</div>
+    </div>
+</body>
+</html>

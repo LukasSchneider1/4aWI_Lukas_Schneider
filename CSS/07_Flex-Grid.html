@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex-Grid</title>
+    <style>
+      .box {
+        background-color: red;        
+        padding: 10px;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 33% 33% 33%; /* Hier kann man die Anzahl der Spalten im Grid festlegen und deren Größe*/
+        grid-auto-rows: minmax(100px, auto); /* hiermit kann man eine Mindestgröße für die Spalten definieren, und eine Maximale Größe, welche hier auf Auto ist damit sich das div dem Text der darin ist anpasst */
+        column-gap: 1px; /* Hier kann man den Abstand der Spalten im Grid festlegen */
+        row-gap: 1px; /* Hier kann man den Abstand der Reihen im Grid festlegen */
+        
+      }
+      .item1{
+          grid-column-start: span 3; /* hiermit kann man definierten, wie viele Spalten das div einnehmen soll*/
+          grid-row-start: span 3; /* hiermit kann man definierten, wie viele Reihen das div einnehmen soll*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box item1">eins</div>
+      <div class="box item2">zwei</div>
+      <div class="box item3">drei</div>
+      <div class="box item4">vier</div>
+      <div class="box item5">fünf</div>
+    </div>
+  </body>
+</html>

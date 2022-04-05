@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex-Box</title>
+    <style>
+      .box {
+        background-color: red;
+        width: 100px;
+        height:100px;
+        margin:5px;
+      }
+
+      .container{
+          background-color: green;
+          display: flex; /* Die divs die sich hier in diesem Container befinden werden automatisch in eine Reihe umgebaut */          
+          flex-direction: row; /* hier kann die Ausrichtung der Inhalte bestimmt werden, entweder untereinander, nebeneinander, umgekehrte Reihe (rechts nach links)*/
+          justify-content: center; /* der Inhalt wird in der Hauptachse (horizontal) zentriert*/
+          align-items: center; /* der Inhalt wird in der Nebenachse (vertikal) zentriert*/
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">eins</div>
+      <div class="box">zwei</div>
+      <div class="box">drei</div>
+    </div>
+    <div class="container">
+        <div class="box">eins</div>
+        <div class="box">zwei</div>
+        <div class="box">drei</div>
+      </div>
+  </body>
+</html>
