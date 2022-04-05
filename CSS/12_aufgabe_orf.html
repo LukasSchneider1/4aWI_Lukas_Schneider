@@ -4,63 +4,163 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cssreset.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
+      href="path/to/font-awesome/css/font-awesome.min.css"
     />
     <title>ORF</title>
     <style>
-      .navbar {
-        display: flex;
-        flex-direction: row;
-        background-color: brown;
-        color: white;
-        font-family: "ORF ON", Arial, Helvetica, Lucida Sans Unicode, Lucida Grande, sans-serif;
-        font-feature-settings: "liga", "kern";
+      body {
+        width: 1200px;
+        background-color: #d6dcde;
       }
+      .navbar {
+        height: 27px;
+        background-color: #9e0b0f;
+        color: white;
+        font-family: "ORF ON", Arial, Helvetica, Lucida Sans Unicode,
+          Lucida Grande, sans-serif;
+        font-feature-settings: "liga", "kern";
+        display: grid;
+        grid-template-columns: 80% 20%;
+      }
+
       .navleft {
         display: flex;
         flex-direction: row;
+        align-items: center;
         justify-content: space-around;
       }
 
       .navright {
         display: flex;
-        flex-direction: row;
         justify-content: center;
+        align-items: center;
+        padding-right: 10px;
       }
-      .orfLogo{
-          width: 150px;
-          height:100px;
+
+      .rowOrflogo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #bb131a;
       }
-      .row-orflogo{
-          background-color: #bb131a;
+
+      .vorarlbergLogoText {
+        color: white;
+        font-family: "ORF ON", Arial, Helvetica, Lucida Sans Unicode,
+          Lucida Grande, sans-serif;
+        font-feature-settings: "liga", "kern";
+        font-size: 28px;
+        padding-left: 20px;
+      }
+
+      .orfLogo {
+      }
+
+      .box {
+      }
+
+      .spaceholder {
+        background-color: #d32824;
+        height: 11px;
+      }
+      .navbar2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #790000;
+        color: white;
+        font-family: "ORF ON", Arial, Helvetica, Lucida Sans Unicode,
+          Lucida Grande, sans-serif;
+        font-feature-settings: "liga", "kern";
+      }
+      .covidpicture {
+        margin-top: 10px;
+      }
+      .covidcontainer{
+          position: relative;
+          display: flex;
+          justify-content: center;
+      }
+      .covidinfo{
+          position: absolute;          
+          top: -60px;
+          background-color: white;
+          padding:20px;
+          width: 700px;
+      }
+      .category{
+        font-family: "ORF ON", Arial, Helvetica, Lucida Sans Unicode,
+          Lucida Grande, sans-serif;
+        font-feature-settings: "liga", "kern";
+        font-size: 10px;
+          color:grey;
+          text-transform: uppercase;
+      }
+      .title{
+          margin-top: 5px;
+          margin-bottom: 5px;
+        font-family: "ORF ON", Arial, Helvetica, Lucida Sans Unicode,
+          Lucida Grande, sans-serif;
+        font-feature-settings: "liga", "kern";
+        font-size: 20px;   
+        font-weight: bold;                 
       }
     </style>
   </head>
   <body>
-    <div class="row navbar">
-      <div class="col-md-8 navleft">
-        <div>Fernsehen</div>
-        <div>TVthek</div>
-        <div>Radiothek</div>
-        <div>Debatte</div>
-        <div>Österreich</div>
-        <div>Wetter</div>
-        <div>Sport</div>
-        <div>News</div>
+    <div class="navbar">
+      <div class="navleft">
+        <div class="box">Fernsehen</div>
+        <div class="box">TVthek</div>
+        <div class="box">Radiothek</div>
+        <div class="box">Debatte</div>
+        <div class="box">Österreich</div>
+        <div class="box">Wetter</div>
+        <div class="box">Sport</div>
+        <div class="box">News</div>
       </div>
-      <div class="col-md-4 navright">ORF.at im Überblick</div>      
+      <div class="navright">ORF.at im Überblick</div>
     </div>
-    <div class="row row-orflogo">
-        <div class="col-md-1">
-            Vorarlberg
-        </div>
-        <div class="col-md-11">
-            <img src="./img/orfLogo.svg" alt="Orf Logo" class="orfLogo">
-        </div>
+    <div class="rowOrflogo">
+      <div class="vorarlbergLogoText">Vorarlberg</div>
+      <div class="orfLogo">
+        <img
+          src="./img/orfLogo.svg"
+          alt="Orf Logo"
+          width="150px"
+          height="100px"
+        />
+      </div>
     </div>
+    <div class="spaceholder"></div>
+    <div class="navbar2">
+      <div>Vorarlber-News</div>
+      <div>Radio Vorarlberg</div>
+      <div>Vorarlberg Heute</div>
+      <div>ORF Vorarlberg</div>
+      <div>Ganz Österreich</div>
+      <div>
+        <img
+          src="./img/push.svg"
+          alt="Push Notification Image"
+          width="15px"
+          height="17px"
+        />
+      </div>
+    </div>
+    <div class="covidpicture">
+      <img src="./img/orf_b1.jpg" alt="Covid 19 Information" width="1200px" />
+    </div>
+    <div class="covidcontainer">
+    <div class="covidinfo">
+      <div class="category">CORONAVIRUS</div>
+      <div class="title">19 neue Infektionen und ein Todesopfer</div>
+      <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt est itaque aspernatur possimus quos qui temporibus adipisci, delectus ab accusamus?</div>
+    </div>
+</div>
   </body>
 </html>
