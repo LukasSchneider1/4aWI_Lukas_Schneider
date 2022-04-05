@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cssreset.css">
+    <title>CSS_HTML_TEST</title>
+    <style>
+        ul{
+            list-style: circle;
+            list-style-position: inside;
+        }
+        .cre{
+            position: absolute;
+            width: 50px;
+            height:50px;
+            background-color: violet;
+            right: 0;
+            top:0;
+            border: 2px solid black;
+        }
+        .cue{
+            background-color:lightblue;
+            width:760px;
+            height:300px;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-bottom: 50px;
+            padding-top: 20px;
+            padding-left: 20px;
+            border: 2px solid black;   
+            position:relative;         
+        }
+        .cb{
+            background-color:burlywood;
+            width: 100px;
+            height:100px;
+            position:absolute;
+            right: 0px;
+            bottom:0px;     
+            border: 2px solid black;          
+        }
+        .cge{
+            display: flex;
+            background-color: yellow;
+            width:100%;     
+            flex-direction: row;   
+            justify-content: space-around; 
+            align-items:center;
+            border: 2px solid black; 
+            height:150px;    
+        }
+        .cgr{
+            width: 50px;
+            height: 50px;
+            background-color:green; 
+            border: 2px solid black;             
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="cre"></div>
+    <div class="cue">        
+        <h1>Willkommen!</h1>
+        <ul>
+            <li>
+                Eins
+            </li>
+            
+            <li>
+                Zwei
+            </li>
+            
+            <li>
+                Drei
+            </li>
+        </ul>
+        <div class="cb"></div>
+    </div>
+    <div class="cge">
+        <div class="cgr"></div>
+        <div class="cgr"></div>
+        <div class="cgr"></div>
+        <div class="cgr"></div>
+    </div>
+  </body>
+</html>
