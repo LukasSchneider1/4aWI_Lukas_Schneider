@@ -18,7 +18,6 @@ var Person = [
 ]
 
 
-
 var html = "";
 
 for(i = 0; i < Person.length; i++){

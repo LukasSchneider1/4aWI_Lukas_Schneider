@@ -42,4 +42,3 @@ document.getElementById("addTask").addEventListener("click", function(){
     printTaskList()
 })
 
-

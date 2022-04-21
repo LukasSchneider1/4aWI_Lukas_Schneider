@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDoList</title>
-    <script src="./04_ToDoList.js" defer></script>
+    <script src="./05_ToDo.js" defer></script>
 
     <style>
       .container {
@@ -17,6 +17,9 @@
       #addTask{
         margin-top: 10px;
       }
+      #zuTun{
+          background-color: yellowgreen;
+      }
     </style>
   </head>
   <body>
@@ -26,14 +29,10 @@
       </div>
       <div id="content">
         <div class="list">
-          <div class="zuTun">
-            <ul id="TaskList">
-            </ul>   
-          </div>
-          <div class="erledigt">
-            <ul id="TaskList">
-            </ul>   
-          </div>              
+          <div>  
+            <ul id="zuTun">
+            </ul>
+          </div>         
         </div>
         <div class="inputs">
           <input id="aufgabe" placeholder="Aufgabe" />
