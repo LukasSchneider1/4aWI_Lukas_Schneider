@@ -44,4 +44,3 @@ function loadUser(){
     console.log(err);
   });
 }
-
