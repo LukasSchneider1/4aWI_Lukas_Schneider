@@ -1,47 +1,7 @@
 .wrapper{    
-    display: grid;    
-    grid-template-columns: repeat(6, 0fr);
-    justify-content:center;                  
-}
-
-@media (max-width: 1300px){
-    .wrapper{    
-        display: grid;    
-        grid-template-columns: repeat(5, 0fr);
-        justify-content:center;                  
-    }
-}
-
-@media (max-width: 1000px){
-    .wrapper{    
-        display: grid;    
-        grid-template-columns: repeat(4, 0fr);
-        justify-content:center;                  
-    }
-}
-
-@media (max-width: 800px){
-    .wrapper{    
-        display: grid;    
-        grid-template-columns: repeat(3, 0fr);
-        justify-content:center;                  
-    }
-}
-
-@media (max-width: 560px){
-    .wrapper{    
-        display: grid;    
-        grid-template-columns: repeat(2, 0fr);
-        justify-content:center;                  
-    }
-}
-
-@media (max-width: 260px){
-    .wrapper{    
-        display: grid;    
-        grid-template-columns: repeat(1, 0fr);
-        justify-content:center;                  
-    }
+    display: flex;    
+    justify-content:center;     
+    flex-wrap: wrap;             
 }
 
 .container{
