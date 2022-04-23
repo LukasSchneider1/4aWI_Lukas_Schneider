@@ -7,6 +7,7 @@ export default class car{
 
     setEngine(engine){
         this.engine = engine;
+        console.log(this.name)
     }
 
     drive(){
