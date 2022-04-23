@@ -1,6 +1,4 @@
-
 export default class battery{
-
     
     constructor(state1, state2){
         this.state1 = state1;
