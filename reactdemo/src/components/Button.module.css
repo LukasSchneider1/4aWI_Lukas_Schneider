@@ -1,0 +1,19 @@
+.ButtonDiv{
+    display: flex;
+    margin-left: 60px;
+}
+
+.Button{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: rgb(70, 185, 70);
+    color: white;
+    border-style: none;
+}
+
+Button:hover{
+    cursor: pointer;
+    background-color: cadetblue;
+}

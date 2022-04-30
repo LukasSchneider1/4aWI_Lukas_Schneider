@@ -1,0 +1,25 @@
+.card{
+    
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 200px;
+    box-shadow: 0px 3px 3px 3px #888888
+}
+
+.Image{
+    width: 200px;    
+}
+
+.Name{
+    padding-top: 6px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.Info{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+}

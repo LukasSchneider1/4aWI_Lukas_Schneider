@@ -1,0 +1,21 @@
+li{
+    display: flex;
+    background-color: rgb(15, 142, 151);
+    list-style-type: none;
+    height: 50px;
+    align-items: center;
+    padding-left: 10px;
+    margin: 2px;
+    width: 150px;
+}
+
+.List{
+    display: flex;
+    justify-content: left;
+    color: white;    
+}
+
+li:hover{
+    cursor: pointer;
+    background-color: rgb(30, 224, 150); 
+}
