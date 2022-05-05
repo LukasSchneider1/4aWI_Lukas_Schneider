@@ -6,10 +6,16 @@ class ToDoList extends Component {
 
     getAllToDos = () =>{
         let widgets = [];
+        let buttonId = 0;
         this.props.todos.forEach(todo => {
-            widgets.push(<ToDo title={todo.name} isDone={todo.done}></ToDo>)
-        });
+            buttonId ++
+            widgets.push(<ToDo title={todo.name} isDone={todo.done} buttonID={buttonId} rmTask={this.rmTask}></ToDo>)
+        });        
         return widgets;
+    }
+
+    rmTask = (id) =>{
+        this.props.rmTask(id);
     }
     
     render() { 

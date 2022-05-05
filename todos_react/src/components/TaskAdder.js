@@ -4,10 +4,9 @@ class TaskAdder extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            inputValue:"Test"
+            inputValue:""
         }
-    }
-    state = {  }
+    }    
     
     addTask = () =>{
         this.props.onTaskAdded(this.state.inputValue)        

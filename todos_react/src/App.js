@@ -11,9 +11,7 @@ class App extends Component{
   constructor(props){
     super(props);
     this.state = {
-      todos:[{"id": 1, "name": "einkaufen", "done":false},
-      {"id": 2, "name": "putzen", "done":false}      
-    ]
+      todos:[]
     }
 
   }
@@ -30,7 +28,17 @@ addTask = (value) => {
 
   this.setState({
     todos: todos
-  })
+  })  
+}
+
+removeTask = (element) =>{
+  let todos = this.state.todos;
+  todos.splice(element-1,1)
+
+  this.setState({
+    todos: todos
+  })  
+  
 }
 
   render(){
@@ -38,7 +46,7 @@ addTask = (value) => {
       <div className="App">
       <Head></Head>
       <TaskAdder onTaskAdded={this.addTask}></TaskAdder>
-      <ToDoList todos={this.state.todos}></ToDoList>
+      <ToDoList todos={this.state.todos} rmTask={this.removeTask}></ToDoList>      
       </div>
     );
   }
