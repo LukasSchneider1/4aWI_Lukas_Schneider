@@ -22,7 +22,7 @@ function Bundesliga() {
     <div>
         <ul>
       {bulliTeam.map(team => (
-        <li>{team.name}</li>
+        <li>{team.name}<img src={team.crestUrl}></img></li>
       ))}
       </ul>
     </div>

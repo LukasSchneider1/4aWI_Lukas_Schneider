@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import GetLeagues from "./GetLeagues";
 import "./NavBar.css";
 
 function NavBar() {
@@ -14,7 +13,7 @@ function NavBar() {
         <div className="dropdown-content">        
           <a href="#test">Premier League</a>
           <a href="#test">La Liga</a>
-          <a href="#test">Bundesliga</a>
+          <a href="Bundesliga">Bundesliga</a>
         </div>
       </div>
     </div>
