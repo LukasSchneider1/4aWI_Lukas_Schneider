@@ -1,19 +1,21 @@
 import React, { Component } from "react";
 import "./NavBar.css";
+import {Route, Link, NavLink} from 'react-router-dom'
+import GetBundesliga from "./GetBundesliga";
 
 function NavBar() {
   return (
     <div className="navBar">
-      <a href="#home">Home</a>
-      <a href="#news">Player</a>
+      <a href="/">Home</a>
+      <a href="/Players">Player</a>
       <div className="dropdown">
         <button className="dropbtn">
           Leagues          
         </button>
         <div className="dropdown-content">        
-          <a href="#test">Premier League</a>
-          <a href="#test">La Liga</a>
-          <a href="Bundesliga">Bundesliga</a>
+          <a href="/GetPremierLeague">Premier League</a>
+          <a href="/GetLigueA">Ligue 1</a>
+          <a href="/GetBundesliga">Bundesliga</a>               
         </div>
       </div>
     </div>

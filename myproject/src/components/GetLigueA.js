@@ -3,8 +3,8 @@ import axios from "axios";
 import NavBar from "./NavBar";
 import "./TeamCard.css"
 
-function GetBundesliga() {
-  const [bulliTeam, setBulliTeam] = useState([]);
+function GetLigueA() {
+  const [LigueATeam, setLigueATeam] = useState([]);
 
   const config = {
     headers: {
@@ -14,17 +14,17 @@ function GetBundesliga() {
 
   useEffect(() => {
     axios
-      .get("http://api.football-data.org/v2/competitions/2002/teams", config)
+      .get("http://api.football-data.org/v2/competitions/FL1/teams", config)
       .then((res) => {
-        const bulliTeam = res.data.teams;
-        setBulliTeam(bulliTeam);
+        const LigueATeam = res.data.teams;
+        setLigueATeam(LigueATeam);
       });
   }, []);
 
   return (
     <div>
       <NavBar></NavBar>      
-        {bulliTeam.map((team) => (
+        {LigueATeam.map((team) => (
           <div className="card">
             <div className="clubname">                
             {team.name}
@@ -38,4 +38,4 @@ function GetBundesliga() {
   );
 }
 
-export default GetBundesliga;
+export default GetLigueA;
