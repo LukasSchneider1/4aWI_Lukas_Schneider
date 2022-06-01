@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import NavBar from "./NavBar";
 import "./TeamCard.css"
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
 
 function GetBundesliga() {
   const [bulliTeam, setBulliTeam] = useState([]);
@@ -23,7 +24,13 @@ function GetBundesliga() {
 
   return (
     <div>
-      <NavBar></NavBar>      
+      <NavBar></NavBar>
+      <div>
+        <button><i className="fa fa-house"></i></button>
+        <button>Click Me</button>
+        <button>Click Me</button>
+      </div>
+      {/*      
         {bulliTeam.map((team) => (
           <div className="card">
             <div className="clubname">                
@@ -33,7 +40,7 @@ function GetBundesliga() {
             <img src={team.crestUrl} width="150px" height="150px"></img>  
             </div>                  
           </div>
-        ))}      
+        ))}       */}
     </div>
   );
 }
