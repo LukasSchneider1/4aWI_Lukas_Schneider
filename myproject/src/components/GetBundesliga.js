@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import NavBar from "./NavBar";
 import "./TeamCard.css"
+import Stack from '@mui/material/Stack';
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function GetBundesliga() {
   const [bulliTeam, setBulliTeam] = useState([]);
@@ -23,7 +26,10 @@ function GetBundesliga() {
 
   return (
     <div>
-      <NavBar></NavBar>      
+      <NavBar></NavBar>   
+      <IconButton aria-label="delete" size="large">
+  <DeleteIcon fontSize="inherit" />
+</IconButton>
         {bulliTeam.map((team) => (
           <div className="card">
             <div className="clubname">                

@@ -1,25 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import {BrowserRouter, Route, Routes, Router} from 'react-router-dom'
-import GetBundesliga from './components/GetBundesliga';
-import GetPremierLeague from './components/GetPremierLeague';
-import GetLigueA from './components/GetLigueA';
-import Players from './components/SearchPlayer';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter, Route, Routes, Router } from "react-router-dom";
+import GetBundesliga from "./components/GetBundesliga";
+import GetPremierLeague from "./components/GetPremierLeague";
+import GetLigueA from "./components/GetLigueA";
+import Players from "./components/SearchPlayer";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App/>}/>
-        <Route path="/GetBundesliga" element={<GetBundesliga/>}/> 
-        <Route path="/GetPremierLeague" element={<GetPremierLeague/>}/>
-        <Route path="/GetLigueA" element={<GetLigueA/>}/>   
-        <Route path="/Players" element={<Players/>}/>    
-    </Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/GetBundesliga" element={<GetBundesliga />} />
+        <Route path="/GetPremierLeague" element={<GetPremierLeague />} />
+        <Route path="/GetLigueA" element={<GetLigueA />} />
+        <Route path="/Players" element={<Players />} />
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );
