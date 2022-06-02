@@ -3,21 +3,17 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter, Route, Routes, Router } from "react-router-dom";
-import GetBundesliga from "./components/GetBundesliga";
-import GetPremierLeague from "./components/GetPremierLeague";
-import GetLigueA from "./components/GetLigueA";
+import { BrowserRouter, Route, Routes, } from "react-router-dom";
 import Players from "./components/SearchPlayer";
+import GetLeague from "./components/GetLeague";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <React.StrictMode>    
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/GetBundesliga" element={<GetBundesliga />} />
-        <Route path="/GetPremierLeague" element={<GetPremierLeague />} />
-        <Route path="/GetLigueA" element={<GetLigueA />} />
+        <Route path="/GetLeague" element={<GetLeague />} />        
         <Route path="/Players" element={<Players />} />
       </Routes>
     </BrowserRouter>

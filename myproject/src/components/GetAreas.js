@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import NavBar from "./NavBar";
 
+
+
 function GetAreas() {
   const [areas, setAreas] = useState([]);
 
@@ -22,7 +24,7 @@ function GetAreas() {
       });
   }, []);
 
-  return (
+  return (    
       console.log(areas)
   );
 }

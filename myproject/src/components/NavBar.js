@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import "./NavBar.css";
-import {Route, Link, NavLink} from 'react-router-dom'
-import GetBundesliga from "./GetBundesliga";
+import { Link } from 'react-router-dom'
 
-function NavBar() {
-  return (
+function NavBar() {  
+
+    return (
     <div className="navBar">
       <a href="/">Home</a>
       <a href="/Players">Player</a>
@@ -12,10 +12,10 @@ function NavBar() {
         <button className="dropbtn">
           Leagues          
         </button>
-        <div className="dropdown-content">        
-          <a href="/GetPremierLeague">Premier League</a>
-          <a href="/GetLigueA">Ligue 1</a>
-          <a href="/GetBundesliga">Bundesliga</a>               
+        <div className="dropdown-content">
+          <Link to="/GetLeague" state={"PL"} >Premier League</Link>
+          <Link to="/GetLeague" state={'BL1'}  >Bundesliga</Link>  
+          <Link to="/GetLeague" state={'FL1'} >Ligue 1</Link>             
         </div>
       </div>
     </div>
