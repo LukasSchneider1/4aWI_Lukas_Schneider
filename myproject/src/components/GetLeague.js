@@ -3,9 +3,9 @@ import axios from "axios";
 import NavBar from "./NavBar";
 import "./TeamCard.css";
 import { useLocation } from "react-router-dom";
+import Button from "@mui/material/Button";
 
 function GetLeague() {
-  
   const [team, setTeam] = useState([]);
   const location = useLocation();
   const data = location.state;
@@ -28,17 +28,32 @@ function GetLeague() {
       });
   }, [data]);
 
+/*<div className="card" key={team.id}>
+        <div className="clubname">{team.name}</div>
+        <div className="clubpicture">
+          <img src={team.crestUrl} width="150px" height="150px"></img>
+        </div>
+      </div>*/
+
+  const getTeams = () => {        
+    const Teams = team.map(team => <p>{team.name}</p>)
+    
+    console.log(Teams);
+  };
+
   return (
     <div>
       <NavBar></NavBar>
-      {team.map((team) => (
-        <div className="card" key={team.id}>
-          <div className="clubname">{team.name}</div>
-          <div className="clubpicture">
-            <img src={team.crestUrl} width="150px" height="150px"></img>
-          </div>
-        </div>
-      ))}
+      <Button variant="contained" color="primary" onClick={getTeams}>
+        Tabelle
+      </Button>
+      <Button variant="contained" color="secondary">
+        Mannschaften
+      </Button>
+      <Button variant="contained" color="primary">
+        Top Scorer
+      </Button>
+
     </div>
   );
 }

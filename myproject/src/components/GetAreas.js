@@ -15,9 +15,9 @@ function GetAreas() {
 //https://api.football-data.org/v2/competitions/PL/standings
 //https://api.football-data.org/v2/competitions/2002/scorers
 
-  useEffect(() => {
+  useEffect(() => {    
     axios
-      .get("https://api.football-data.org/v2/competitions/PL/standings", config)
+      .get("http://api.football-data.org/v2/players/", config)
       .then((res) => {
         const areas = res.data;
         setAreas(areas);
@@ -25,6 +25,7 @@ function GetAreas() {
   }, []);
 
   return (    
+    
       console.log(areas)
   );
 }
