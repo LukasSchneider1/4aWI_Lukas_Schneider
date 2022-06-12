@@ -9,6 +9,7 @@ function GetLeague() {
   const [team, setTeam] = useState([]);
   const location = useLocation();
   const data = location.state;
+  const [state, setState] = useState({content: ''}); 
 
   const config = {
     headers: {
@@ -26,6 +27,7 @@ function GetLeague() {
         const team = res.data.teams;
         setTeam(team);
       });
+      setState({content:""})
   }, [data]);
 
 /*<div className="card" key={team.id}>
@@ -35,25 +37,27 @@ function GetLeague() {
         </div>
       </div>*/
 
-  const getTeams = () => {        
-    const Teams = team.map(team => <p>{team.name}</p>)
-    
-    console.log(Teams);
+  const getTeams = () => {   
+    setState({content: team.map(team => <p>{team.name}</p>)})        
+  };
+
+  const getMannschaft = () => {   
+    setState({content: team.map(team => <p>{team.id}</p>)})        
   };
 
   return (
     <div>
       <NavBar></NavBar>
       <Button variant="contained" color="primary" onClick={getTeams}>
-        Tabelle
+        Standings
       </Button>
-      <Button variant="contained" color="secondary">
-        Mannschaften
+      <Button variant="contained" color="secondary" onClick={getMannschaft}>
+        Teams
       </Button>
       <Button variant="contained" color="primary">
         Top Scorer
       </Button>
-
+      <div>{state.content}</div>
     </div>
   );
 }
