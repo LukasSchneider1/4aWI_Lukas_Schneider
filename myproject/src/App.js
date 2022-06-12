@@ -8,9 +8,12 @@ import './cssreset.css'
 
 function App() {
   return (    
-    <div className="App">          
-      <NavBar></NavBar>  
-      <GetAreas></GetAreas>                          
+    <div className="App">     
+    <NavBar></NavBar>     
+       <div>
+       <GetAreas></GetAreas>   
+       </div>   
+                                
     </div>
   );
 }

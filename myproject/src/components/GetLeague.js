@@ -16,7 +16,7 @@ function GetLeague() {
     },
   };
 
-  useEffect(() => {
+  const fetchData = () => {
     axios
       .get(
         "http://api.football-data.org/v2/competitions/" + data + "/teams",
@@ -26,34 +26,38 @@ function GetLeague() {
         const team = res.data.teams;
         setTeam(team);
       });
+  };
+
+  useEffect(() => {
+    fetchData();
   }, [data]);
 
-/*<div className="card" key={team.id}>
+  /*<div className="card" key={team.id}>
         <div className="clubname">{team.name}</div>
         <div className="clubpicture">
           <img src={team.crestUrl} width="150px" height="150px"></img>
         </div>
       </div>*/
 
-  const getTeams = () => {        
-    const Teams = team.map(team => <p>{team.name}</p>)
-    
-    console.log(Teams);
+  const getTeams = () => {    
+      {team.map(item => {
+        return <div className="clubname">{item.name}</div>
+      })}   
   };
 
   return (
     <div>
       <NavBar></NavBar>
-      <Button variant="contained" color="primary" onClick={getTeams}>
+      
+      <Button variant="contained" color="primary">
         Tabelle
       </Button>
-      <Button variant="contained" color="secondary">
+      <Button variant="contained" color="secondary" onClick={getTeams}>
         Mannschaften
       </Button>
       <Button variant="contained" color="primary">
         Top Scorer
       </Button>
-
     </div>
   );
 }
