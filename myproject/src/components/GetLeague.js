@@ -4,9 +4,12 @@ import NavBar from "./NavBar";
 import "./TeamCard.css";
 import { useLocation } from "react-router-dom";
 import Button from "@mui/material/Button";
+import GetScores from "./GetScorers";
 
 function GetLeague() {
   const [team, setTeam] = useState([]);
+  const [areas, setAreas] = useState([]);
+  const [standings, setStandings] = useState([]);
   const location = useLocation();
   const data = location.state;
   const [state, setState] = useState({content: ''}); 
@@ -17,8 +20,8 @@ function GetLeague() {
     },
   };
 
-  const fetchData = () => {
-    axios
+  useEffect(() => {   
+    /*axios
       .get(
         "http://api.football-data.org/v2/competitions/" + data + "/teams",
         config
@@ -27,63 +30,64 @@ function GetLeague() {
         const team = res.data.teams;
         setTeam(team);
       });
-<<<<<<< HEAD
-  };
 
-  useEffect(() => {
-    fetchData();
-=======
+      axios
+      .get(
+        "https://api.football-data.org/v2/competitions/" + data + "/scorers",
+        config
+      )
+      .then((res) => {
+        const areas = res.data.scorers;
+        setAreas(areas);
+      });
+      axios
+      .get("https://api.football-data.org/v2/competitions/" + data + "/standings", config)
+      .then((res) => {
+        const standings = res.data.standings[0].table;
+        setStandings(standings);
+      });*/
       setState({content:""})
->>>>>>> a8548e42807e399677fe13addcf8f5dff13bf699
   }, [data]);
 
-  /*<div className="card" key={team.id}>
+/*<div className="card" key={team.id}>
         <div className="clubname">{team.name}</div>
         <div className="clubpicture">
           <img src={team.crestUrl} width="150px" height="150px"></img>
         </div>
-      </div>*/
+      </div>
+      
+      
+      <Button variant="contained" color="primary" onClick={getScorers}>
+        Top Scorer
+      </Button>
+      
+      */
 
-<<<<<<< HEAD
   const getTeams = () => {    
-      {team.map(item => {
-        return <div className="clubname">{item.name}</div>
-      })}   
-=======
-  const getTeams = () => {   
     setState({content: team.map(team => <p>{team.name}</p>)})        
   };
 
-  const getMannschaft = () => {   
-    setState({content: team.map(team => <p>{team.id}</p>)})        
->>>>>>> a8548e42807e399677fe13addcf8f5dff13bf699
+  const getScorers = () => { 
+    setState({content: <GetScores data={data}></GetScores>})        
   };
+
+  const getStandings = () => { 
+    setState({content: standings.map(standings => <p>{standings.team.name}</p>)})        
+};
 
   return (
     <div>
       <NavBar></NavBar>
-<<<<<<< HEAD
-      
-      <Button variant="contained" color="primary">
-        Tabelle
-      </Button>
-      <Button variant="contained" color="secondary" onClick={getTeams}>
-        Mannschaften
-=======
-      <Button variant="contained" color="primary" onClick={getTeams}>
+      <Button variant="contained" color="primary" onClick={getStandings}>
         Standings
       </Button>
-      <Button variant="contained" color="secondary" onClick={getMannschaft}>
+      <Button variant="contained" color="secondary" onClick={getTeams}>
         Teams
->>>>>>> a8548e42807e399677fe13addcf8f5dff13bf699
       </Button>
-      <Button variant="contained" color="primary">
+      <Button variant="contained" color="primary" onClick={getScorers}>
         Top Scorer
       </Button>
-<<<<<<< HEAD
-=======
       <div>{state.content}</div>
->>>>>>> a8548e42807e399677fe13addcf8f5dff13bf699
     </div>
   );
 }

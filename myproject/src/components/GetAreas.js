@@ -17,9 +17,9 @@ function GetAreas() {
 
   useEffect(() => {    
     axios
-      .get("http://api.football-data.org/v2/players/", config)
+      .get("https://api.football-data.org/v2/competitions/2002/scorers", config)
       .then((res) => {
-        const areas = res.data;
+        const areas = res.data.scorers;
         setAreas(areas);
       });
   }, []);
