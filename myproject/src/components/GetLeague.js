@@ -9,6 +9,7 @@ function GetLeague() {
   const [team, setTeam] = useState([]);
   const location = useLocation();
   const data = location.state;
+  const [state, setState] = useState({content: ''}); 
 
   const config = {
     headers: {
@@ -26,10 +27,14 @@ function GetLeague() {
         const team = res.data.teams;
         setTeam(team);
       });
+<<<<<<< HEAD
   };
 
   useEffect(() => {
     fetchData();
+=======
+      setState({content:""})
+>>>>>>> a8548e42807e399677fe13addcf8f5dff13bf699
   }, [data]);
 
   /*<div className="card" key={team.id}>
@@ -39,25 +44,46 @@ function GetLeague() {
         </div>
       </div>*/
 
+<<<<<<< HEAD
   const getTeams = () => {    
       {team.map(item => {
         return <div className="clubname">{item.name}</div>
       })}   
+=======
+  const getTeams = () => {   
+    setState({content: team.map(team => <p>{team.name}</p>)})        
+  };
+
+  const getMannschaft = () => {   
+    setState({content: team.map(team => <p>{team.id}</p>)})        
+>>>>>>> a8548e42807e399677fe13addcf8f5dff13bf699
   };
 
   return (
     <div>
       <NavBar></NavBar>
+<<<<<<< HEAD
       
       <Button variant="contained" color="primary">
         Tabelle
       </Button>
       <Button variant="contained" color="secondary" onClick={getTeams}>
         Mannschaften
+=======
+      <Button variant="contained" color="primary" onClick={getTeams}>
+        Standings
+      </Button>
+      <Button variant="contained" color="secondary" onClick={getMannschaft}>
+        Teams
+>>>>>>> a8548e42807e399677fe13addcf8f5dff13bf699
       </Button>
       <Button variant="contained" color="primary">
         Top Scorer
       </Button>
+<<<<<<< HEAD
+=======
+      <div>{state.content}</div>
+>>>>>>> a8548e42807e399677fe13addcf8f5dff13bf699
     </div>
   );
 }
