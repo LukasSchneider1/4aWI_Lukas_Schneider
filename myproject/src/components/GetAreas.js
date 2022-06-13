@@ -17,16 +17,18 @@ function GetAreas() {
 
   useEffect(() => {    
     axios
-      .get("https://api.football-data.org/v2/competitions/2002/scorers", config)
+      .get("", config)
       .then((res) => {
         const areas = res.data.scorers;
         setAreas(areas);
       });
   }, []);
 
-  return (    
-    
-      console.log(areas)
+  return (   
+    <div>
+      <h1>Welcome to my site!!!</h1>
+      <h5>Its all about Soccer</h5>
+      </div> 
   );
 }
 
